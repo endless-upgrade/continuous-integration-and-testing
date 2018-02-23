@@ -2,5 +2,5 @@
   become: yes
   become_user: root
   roles:
-    - jenkins
+    #- jenkins
     - github
