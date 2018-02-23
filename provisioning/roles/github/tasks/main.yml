@@ -33,6 +33,13 @@
     insertafter: EOF
     line: 'export HUB_HOME=/opt/hub-linux-386-2.3.0-pre10'
 
+- name: Export PATH
+  lineinfile:
+    path: /etc/profile.d/exports.sh
+    state: present
+    insertafter: EOF
+    line: 'export PATH=$PATH:$HUB_HOME/bin'
+
 - name: Alias Hub as Git
   lineinfile:
     path: /etc/profile.d/exports.sh
